@@ -1,0 +1,56 @@
+{
+    "name": "mr687/larangkir",
+    "description": "Raja Ongkir API for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "raja",
+        "ongkir",
+        "library"
+    ],
+    "authors": [{
+        "name": "daphinokio",
+        "email": "daphinokioo@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "require-dev": {
+        "symfony/thanks": "^1.0",
+        "phpunit/phpunit": "^7.4@dev",
+        "mockery/mockery": "^1.0@dev",
+        "orchestra/testbench": "^3.8@dev",
+        "orchestra/database": "^3.8@dev",
+        "illuminate/support": "^5.8@dev",
+        "fzaninotto/faker": "^1.9@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mr687\\Larangkir\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mr687\\Larangkir\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mr687\\Larangkir\\LarangkirServiceProvider"
+            ],
+            "aliases": {
+                "RajaOngkir": "Mr687\\Larangkir\\LarangkirFacade"
+            }
+        }
+    }
+}
